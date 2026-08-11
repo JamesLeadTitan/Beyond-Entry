@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.beyondentry.co.uk/sitemap.xml
