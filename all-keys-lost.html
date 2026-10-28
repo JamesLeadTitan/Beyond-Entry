@@ -321,5 +321,12 @@ function toggleFaq(btn){var item=btn.parentElement;var open=item.classList.conta
 document.querySelectorAll('.faq-item.active').forEach(function(i){i.classList.remove('active');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.faq-ico').textContent='+';});
 if(!open){item.classList.add('active');item.querySelector('.faq-a').style.maxHeight=item.querySelector('.faq-a').scrollHeight+'px';btn.querySelector('.faq-ico').textContent=String.fromCharCode(8722);}}</script>
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a79f7caa8b7a425b346a8af"></script>
+<script>
+(function(){var n=0,t=setInterval(function(){var w=document.querySelector('chat-widget'),r=w&&w.shadowRoot;
+ if(r&&r.querySelector('.lc_text-widget')){var s=document.createElement('style');
+  s.textContent=':host(.lt-qvis) .lc_text-widget--prompt,:host(.lt-qvis) .lc_text-widget--bubble{display:none!important}';r.appendChild(s);clearInterval(t);
+  var i=document.querySelector('iframe[src*="/widget/form/"],iframe[src*="/widget/survey/"]'),f=document.getElementById('quote')||(i&&(i.closest('.ghl-form-wrap')||i));if(f&&'IntersectionObserver' in window){new IntersectionObserver(function(en){w.classList.toggle('lt-qvis',en[0].isIntersecting)}).observe(f)}}
+ else if(++n>40)clearInterval(t)},250)})();
+</script>
 </body>
 </html>
